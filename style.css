@@ -1,0 +1,209 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+
+    }
+}
+
+/* STYLING ITSELF */
+*,
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #B1CCDC 0%, rgba(255, 255, 255, 0.03) 100%);
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin: 3rem 0 4rem;
+    color: #ffffff;
+}
+
+.form {
+    font-size: 18px;
+    margin-bottom: 3rem;
+
+}
+
+input {
+    outline: none;
+    border: none;
+    background: #ffffff !important;
+    height: 2rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.add-btn {
+    margin-right: 1rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.item {
+    flex: 1 0 100%;
+    background: rgb(255, 255, 255);
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    transition: all 1s ease;
+}
+
+.item span {
+    flex: 1;
+    /* background: rgb(255, 255, 255); */
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 8px 0 0;
+    padding: 0 5px;
+
+}
+
+.done {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.done span {
+    text-decoration: line-through;
+}
+
+button {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    border: none;
+}
+
+.done-btn {
+    margin-right: 0.3rem;
+}
+
+.delete-btn {}
+
+i {
+    pointer-events: none;
+}
+
+.anim-gone {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    padding: 0.2rem 0.7rem;
+}
+
+.filter {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.filter:after {
+    content: '25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #000;
+}
+
+select option {
+    border: none;
+    outline: none;
+    padding: 0.2rem 0.7rem;
+}
